@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda"/>
+      <stop offset="100%" style="stop-color:#00b4d8"/>
+    </linearGradient>
+    <linearGradient id="letterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#a8d8ea"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="14" ry="14" fill="url(#bg)"/>
+  
+  <!-- Subtle grid lines for depth -->
+  <line x1="0" y1="32" x2="64" y2="32" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.05"/>
+  <line x1="32" y1="0" x2="32" y2="64" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.05"/>
+
+  <!-- Corner accent marks -->
+  <line x1="6" y1="10" x2="6" y2="16" stroke="url(#accent)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="4" y1="10" x2="10" y2="10" stroke="url(#accent)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="58" y1="48" x2="58" y2="54" stroke="url(#accent)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="54" y1="54" x2="60" y2="54" stroke="url(#accent)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- MSB letters -->
+  <!-- M -->
+  <path d="M5 42 L5 22 L12 34 L19 22 L19 42" 
+        fill="none" stroke="url(#letterGrad)" stroke-width="3" 
+        stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  
+  <!-- S -->
+  <path d="M23 27 Q23 22 28 22 Q33 22 33 27 Q33 32 23 32 Q23 37 28.5 42 Q34 42 34 37"
+        fill="none" stroke="url(#letterGrad)" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  
+  <!-- B -->
+  <path d="M38 22 L38 42 M38 22 Q48 22 48 27 Q48 32 38 32 Q49 32 49 37 Q49 42 38 42"
+        fill="none" stroke="url(#letterGrad)" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- Bottom teal accent line -->
+  <rect x="12" y="48" width="40" height="2" rx="1" fill="url(#accent)" opacity="0.8"/>
+  
+  <!-- Tiny dot accent -->
+  <circle cx="32" cy="56" r="1.5" fill="url(#accent)" opacity="0.6"/>
+</svg>
